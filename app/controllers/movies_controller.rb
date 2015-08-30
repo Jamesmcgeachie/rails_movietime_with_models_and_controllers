@@ -40,4 +40,10 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+private
+
+  def sanitized_movie_params
+    params.permit(:title, :director, :release_year, :rating)
+  end
+
 end

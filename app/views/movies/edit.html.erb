@@ -1,0 +1,28 @@
+<h2>Edit an existing entry</h2>
+<br/>
+<form action ="/movies/<%= @movie.id %>" method="post">
+<%= token_tag nil%>
+    <input type="hidden" name="_method" value="patch" />
+    <table border="1">
+    <tr>
+        <td>Field to edit</td>
+        <td>Value to edit</td>
+    </tr>
+    <tr>
+        <td>Movie title:</td>
+        <td><input type="text" name=title value="<%= @movie.title %>"> </td>
+    </tr>
+    <tr>
+        <td>Movie director:</td>
+        <td><input type="text" name=director value="<%= @movie.director %>"></td>
+    </tr>
+    <tr>
+        <td>Release year:</td>
+        <td><input type="text" name=release_year value="<%= @movie.release_year %>"></td>
+    </tr>
+    <tr>
+        <td>Movie rating: (out of 10):</td>
+        <td><input type="text" name=rating value="<%= @movie.rating %>"></td>
+    </tr>
+    <input type="submit" />
+</form>
