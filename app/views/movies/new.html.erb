@@ -1,4 +1,34 @@
-<form action="/movies" method="post">
+<h1>Add Movie </h1>
+
+<%= form_for @movie do |f| %>
+
+<p>
+<%= f.label :title %>
+<%= f.text_field :title %>
+</p>
+
+<p>
+<%= f.label :director %>
+<%= f.text_field :director %>
+</p>
+
+<p>
+<%= f.label :release_year %>
+<%= f.text_field :release_year %>
+</p>
+
+<p>
+<%= f.label :rating %>
+<%= f.text_field :rating %>
+</p>
+
+<p><%= f.submit %>
+
+<% end %>
+
+<!-- This is my old code before I watched the screencast-->
+
+<!-- <form action="/movies" method="post">
 <%= token_tag nil%>
 <table border="1">
     <tr>
@@ -23,3 +53,4 @@
     </tr>
     <input type="submit" />
 </form>
+ -->
